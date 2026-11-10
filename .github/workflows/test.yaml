@@ -22,7 +22,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.11
+          python-version-file: '.python-version'
       - run: pip install -U pipenv
       - run: pipenv sync --dev
       - run: pipenv run coverage run -m pytest tests/ -svv
